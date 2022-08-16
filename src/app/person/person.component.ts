@@ -9,6 +9,7 @@ import { user } from '../Models/UserInterface/user.interface';
 })
 export class PersonComponent implements OnInit {
   valid:any;
+  nan:number = NaN;
   userInfo:user = {
     firstName: "",
     middleName: '',
@@ -27,6 +28,8 @@ export class PersonComponent implements OnInit {
 
   saveInfo(form:NgForm){
     this.valid=form.status;
+    console.log(form);
+    
     
   }
 

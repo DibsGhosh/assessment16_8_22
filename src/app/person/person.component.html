@@ -65,7 +65,7 @@
         <mat-error *ngIf="Pin.errors?.['required']">
             Pincode is required
         </mat-error>
-        <mat-error *ngIf="Pin.errors?.['minlength']">
+        <mat-error *ngIf="Pin.errors?.['minlength'] || Pin.value === nan">
             Pincode is invalid
         </mat-error>
     </mat-error>
